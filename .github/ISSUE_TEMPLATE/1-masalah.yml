@@ -1,0 +1,40 @@
+name: "🐞 Laporkan masalah / Report a problem"
+description: "Sesuatu tidak berfungsi seperti dijangka / Something does not work as expected"
+labels: ["masalah"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Maklum balas di sini boleh dilihat oleh orang awam.** Jangan lampirkan gambar IC, pasport, nombor IC atau maklumat peribadi.
+        ⚠️ **Feedback here is public.** Do not attach IC or passport images, IC numbers or personal details.
+  - type: dropdown
+    id: alat
+    attributes:
+      label: "Alat / Tool"
+      options: ["Palang IC", "Alat PDF / PDF Tools", "Foto Pasport / Passport Photo", "Lain-lain / Other"]
+    validations:
+      required: true
+  - type: textarea
+    id: apa
+    attributes:
+      label: "Apa yang berlaku? / What happened?"
+      placeholder: "Cth: Butang Muat Turun PDF tidak berfungsi selepas tandakan kad IC."
+    validations:
+      required: true
+  - type: textarea
+    id: langkah
+    attributes:
+      label: "Langkah untuk mengulang / Steps to reproduce"
+      placeholder: "1. ...\n2. ...\n3. ..."
+  - type: input
+    id: peranti
+    attributes:
+      label: "Peranti & pelayar / Device & browser"
+      placeholder: "Cth: iPhone 13, Safari / Windows, Chrome"
+  - type: checkboxes
+    id: privasi
+    attributes:
+      label: "Privasi / Privacy"
+      options:
+        - label: "Saya tidak melampirkan gambar atau maklumat peribadi / I did not attach images or personal details"
+          required: true

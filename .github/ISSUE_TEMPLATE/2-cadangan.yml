@@ -1,0 +1,26 @@
+name: "💡 Cadangan / Suggestion"
+description: "Idea untuk alat baharu atau penambahbaikan / Ideas for new tools or improvements"
+labels: ["cadangan"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Maklum balas di sini boleh dilihat oleh orang awam.** Jangan lampirkan gambar IC, pasport, nombor IC atau maklumat peribadi.
+        ⚠️ **Feedback here is public.** Do not attach IC or passport images, IC numbers or personal details.
+  - type: textarea
+    id: idea
+    attributes:
+      label: "Cadangan anda / Your suggestion"
+    validations:
+      required: true
+  - type: textarea
+    id: kenapa
+    attributes:
+      label: "Kenapa ia berguna? / Why would it help?"
+  - type: checkboxes
+    id: privasi
+    attributes:
+      label: "Privasi / Privacy"
+      options:
+        - label: "Saya tidak melampirkan gambar atau maklumat peribadi / I did not attach images or personal details"
+          required: true
